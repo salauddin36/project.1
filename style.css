@@ -8,7 +8,9 @@
 img{
     cursor: pointer;
 }
-
+img{
+    object-fit: contain;
+}
 /* -----------header---------- */
 header nav .logo{
     display: flex;
@@ -52,13 +54,17 @@ header nav{
 .search{
     display: flex;
     align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
 }
 .search input{
-    width: 30vw;
-    height: 25px;
+    width: 20vw;
+    height: 30px;
     border-radius: 4px;
     margin: 0 4px 0 40px;
     padding: 10px;
+    outline: none;
+    border: none;
 }
 .search input:focus{
     outline: none;
@@ -75,7 +81,6 @@ header nav{
 .btn:hover{
     background-color: white;
     color: #2874f0;
-    font-weight: 700;
     transition: 0.2s;
 }
 
@@ -200,7 +205,7 @@ footer ul li a:hover{
 
 
 /* ------------  Media Querry  -------- */
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 768px) {
     
     header nav{
         display: flex;
@@ -233,6 +238,7 @@ footer ul li a:hover{
     .search{
         display: flex;
         align-items: center;
+        margin-left: 0;
         justify-content: flex-start;
         transition: 0.3s ease;
     }
@@ -244,6 +250,11 @@ footer ul li a:hover{
     
     .btn{
         padding: 5px 5px;
+    }
+    .category ul li {
+        padding: 0px 5px;
+        font-size: 13px;
+        overflow: hidden;
     }
 
     .image img{
@@ -259,5 +270,13 @@ footer ul li a:hover{
     .card-item img{
         width: 140px;
         height: 120px;
+    }
+    footer {
+        height: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-p {
+        padding-left: 20px;
     }
 }
